@@ -1,2 +1,3 @@
-# flask-in-3-hours
-flask lesson for 3 hours
+https://www.youtube.com/watch?v=3mwFC4SHY-Y
+
+Python Flask Tutorial for Beginners - Full Course in 3 hours (2020)

@@ -52,6 +52,20 @@ def posts():
         return render_template('posts.html', posts=all_posts)
 
 
+@app.route('/new', methods=['GET', 'POST'])
+def new():
+    if request.method == 'POST':
+        post_title = request.form['title']
+        post_content = request.form['content']
+        post_author = request.form['author']
+        new_post = BlogPosts(title=post_title, content=post_content, author=post_author)
+        db.session.add(new_post)
+        db.session.commit()
+        return redirect('/posts')
+    else:
+        return render_template('new_post.html')
+
+
 @app.route('/posts/delete/<int:id>')
 def delete(id):
     post = BlogPosts.query.get_or_404(id)

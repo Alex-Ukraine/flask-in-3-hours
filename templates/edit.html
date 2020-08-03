@@ -8,13 +8,13 @@
 <h2>Edit Blog Post:</h2>
 
 <form action="/posts/edit/{{post.id}}" method='POST'>
-    Title: <input type="text" name="title" id='title' value="{{post.title}}">
+    Title: <input class="form-control" type="text" name="title" id='title' value="{{post.title}}">
     <br>
-    Post: <input type="text" name="content" id="content" value="{{post.content}}">
+    Author: <input class="form-control" type="text" name="author" id="author" value="{{post.author}}">
     <br>
-    Author: <input type="text" name="author" id="author" value="{{post.content}}">
+    Post: <textarea class="form-control" type="text" name="content" id="content">{{post.content}}</textarea>
     <br>
-    <input type="submit" value="Save">
+    <input class="btn btn-success" type="submit" value="Save">
 </form>
 <hr>
 {% endblock %}
